@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zero_flow_rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/no_flow_mode_browser_welcome_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="30dp"
+        android:text="欢迎使用暴风影音"
+        android:textColor="@color/black"
+        android:textSize="16.7sp" />
+
+    <TextView
+        android:id="@+id/no_flow_mode_browser_hint_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/no_flow_mode_browser_welcome_textview"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="30dp"
+        android:text="零流量模式已开启"
+        android:textColor="@color/common_depth_gray"
+        android:textSize="13.3sp" />
+
+    <TextView
+        android:id="@+id/no_flow_mode_browser_content_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/no_flow_mode_browser_hint_textview"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
+        android:text="现在暴风影音处在0流量模式下，您可以开启正常流量或选择其他省流量模式"
+        android:textColor="@color/common_depth_gray"
+        android:textSize="13.3sp" />
+
+    <TextView
+        android:id="@+id/zero_flow_normal_layout"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/no_flow_mode_browser_content_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/movie_button_bg_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="开启正常浏览"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    
+    <!-- 自适应个人中心页面高度变窄控件重叠情况修改 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/zero_flow_normal_layout"
+        android:layout_marginTop="118dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/no_flow_mode_browser" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/zero_flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:clickable="true" >
+
+        <View
+            android:id="@+id/no_flow_bot_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="11dp"
+            android:background="@color/activity_detail_header_title_divider_color"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/provincial_traffic_mode_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_flow_bot_line"
+            android:paddingLeft="30dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:src="@drawable/provincial_traffic_mode_imageview"
+            android:text="开启正常浏览" />
+
+        <TextView
+            android:id="@+id/provincial_traffic_mode_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_flow_bot_line"
+            android:layout_toRightOf="@id/provincial_traffic_mode_imageview"
+            android:paddingBottom="11dp"
+            android:text="省流量模式"
+            android:textColor="@color/black"
+            android:textSize="14.7sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

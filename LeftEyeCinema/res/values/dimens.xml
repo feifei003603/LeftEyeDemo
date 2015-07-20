@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+     <dimen name="web_img_spacing">4dp</dimen>
+     <dimen name="actionbar_height">51dip</dimen>
+     <dimen name="ugc_title_size">18sp</dimen>
+     <dimen name="web_img_width">75dp</dimen>
+
+</resources>

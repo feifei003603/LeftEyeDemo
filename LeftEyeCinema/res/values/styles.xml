@@ -1,0 +1,60 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+     <style name="home_name_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#505050</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:paddingLeft">9dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+    
+     <style name="ActionBarStyle">
+        <item name="android:layout_height">@dimen/actionbar_height</item>
+        <item name="android:background">@color/actionbar_bg</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    
+      <style name="ActionBar_Item_Style">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    
+      <style name="ActionBar_Item_Back_Style" parent="ActionBar_Item_Style">
+        <item name="android:src">@drawable/actionbar_back_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+       <style name="ActionBar_Item_text_Style" parent="ActionBar_Item_Style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/ugc_title_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+</resources>

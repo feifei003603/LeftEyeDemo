@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_left_eye_cinema_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC" >
+
+    <!-- 顶部栏 -->
+    <LinearLayout
+        android:id="@+id/activity_left_eye_cinema_title_layout"
+        style="@style/ActionBarStyle" >
+
+        <ImageView
+            android:id="@+id/activity_left_eye_cinema_back"
+            style="@style/ActionBar_Item_Back_Style" />
+
+        <TextView
+            android:id="@+id/activity_left_eye_cinema_title"
+            style="@style/ActionBar_Item_text_Style"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="左眼影院" />
+
+    </LinearLayout>
+
+    <!-- 主体内容 -->
+    <RelativeLayout
+        android:id="@+id/activity_left_eye_cinema_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_left_eye_cinema_title_layout" >
+        <GridView
+            android:id="@+id/activity_left_eye_cinema_gridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/web_img_spacing"
+            android:layout_marginRight="@dimen/web_img_spacing"
+            android:layout_marginTop="@dimen/web_img_spacing"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:horizontalSpacing="@dimen/web_img_spacing"
+            android:listSelector="@drawable/hide_gridview_yellow_selector"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/web_img_spacing" >
+        </GridView>
+     </RelativeLayout>
+    
+
+    <!-- 加载 -->
+    <ViewStub
+        android:id="@+id/viewstub_left_eye_cinema_loading"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/activity_left_eye_cinema_title_layout"
+        android:inflatedId="@+id/viewstub_inflate_left_eye_cinema_loading"
+        android:layout="@layout/common_loading" />
+
+    <!-- 异常提示 -->
+    <!-- 无网络，服务器更新 -->
+    <ViewStub
+        android:id="@+id/viewstub_left_eye_cinema_tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_left_eye_cinema_title_layout"
+        android:inflatedId="@+id/viewstub_inflate_left_eye_cinema_tips"
+        android:layout="@layout/common_tips_layout" />
+    
+    <ViewStub
+        android:id="@+id/viewstub_left_eye_cinema_no_flow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_left_eye_cinema_title_layout"
+        android:layout="@layout/zero_flow_view"
+        android:inflatedId="@+id/viewstub_inflate_left_eye_cinema_no_flow" />
+
+
+</RelativeLayout>
